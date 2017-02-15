@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
     
@@ -20,6 +20,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let topText = self.topText
+        let bottomText = self.bottomText
+        
+        topText?.text = "TOP"
+        bottomText?.text = "BOTTOM"
+        topText?.textAlignment = .center
+        bottomText?.textAlignment = .center
+        
+        topText?.delegate = self
+        bottomText?.delegate = self
         
     }
     
@@ -42,7 +53,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.present(pickerController, animated: true, completion: nil)
     }
     
-    // MARK: Add UIImagePickerControllerDelegate methods
+    // MARK: Set UIImagePickerControllerDelegate methods
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imagePickerView.image = image
@@ -53,6 +64,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: Set UITextFieldDelegate methods
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 
