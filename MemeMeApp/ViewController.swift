@@ -10,14 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imagePickerView: UIImageView!
+    
+    @IBOutlet weak var topText: UITextField!
+    @IBOutlet weak var bottomText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+    }
+    
+    
+    @IBAction func pickAnAlbumImage(sender: AnyObject) {
+        let pickerController = UIImagePickerController()
+        self.present(pickerController, animated: true, completion: nil)
     }
 
 
