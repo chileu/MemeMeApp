@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
     }
     
-    
     @IBAction func pickAnAlbumImage(sender: AnyObject) {
         let pickerController = UIImagePickerController()
         self.present(pickerController, animated: true, completion: nil)
