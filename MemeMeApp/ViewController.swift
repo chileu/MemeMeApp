@@ -18,25 +18,33 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var albumButton: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
+    // MARK: Set textField attributes using NSAttributedString
+    let memeTextAttributes:[String:Any] = [
+        NSStrokeColorAttributeName: UIColor.black,
+        NSForegroundColorAttributeName: UIColor.white,
+        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSStrokeWidthAttributeName: 6.0
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let topText = self.topText
-        let bottomText = self.bottomText
-        
-        topText?.text = "TOP"
-        bottomText?.text = "BOTTOM"
-        topText?.textAlignment = .center
-        bottomText?.textAlignment = .center
-        
-        topText?.delegate = self
-        bottomText?.delegate = self
+        topText.delegate = self
+        bottomText.delegate = self
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         // Determine whether to enable camera button
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        
+        topText.defaultTextAttributes = memeTextAttributes
+        bottomText.defaultTextAttributes = memeTextAttributes
+        topText.text = "TOP"
+        bottomText.text = "BOTTOM"
+        topText.textAlignment = .center
+        bottomText.textAlignment = .center
+
     }
     
     @IBAction func pickAnAlbumImage(sender: AnyObject) {
