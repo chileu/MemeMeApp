@@ -73,6 +73,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+
+        if (textField.text?.isEmpty)! {
+            if textField == self.topText {
+                textField.text = "TOP"
+            } else if textField == self.bottomText {
+                textField.text = "BOTTOM"
+            }
+        }
         return true
     }
 
