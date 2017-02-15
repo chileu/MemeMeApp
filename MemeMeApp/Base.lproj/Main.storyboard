@@ -33,7 +33,11 @@
                                             <action selector="pickAnAlbumImageWithSender:" destination="BYZ-38-t0r" id="yWT-Bs-tpM"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Camera" id="hM3-VW-xsF"/>
+                                    <barButtonItem title="Camera" id="hM3-VW-xsF">
+                                        <connections>
+                                            <action selector="pickACameraImageWithSender:" destination="BYZ-38-t0r" id="jtt-7K-sqn"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QMw-a0-mws" userLabel="Top">
@@ -73,7 +77,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="albumButton" destination="qcj-yE-vvB" id="fFc-8i-jVE"/>
                         <outlet property="bottomText" destination="JP1-fH-CXi" id="gQh-O2-S29"/>
+                        <outlet property="cameraButton" destination="hM3-VW-xsF" id="eqx-nH-Ywf"/>
                         <outlet property="imagePickerView" destination="jWC-FD-12h" id="H3V-0U-Dct"/>
                         <outlet property="topText" destination="QMw-a0-mws" id="kbY-0B-41b"/>
                     </connections>
