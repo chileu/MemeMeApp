@@ -62,14 +62,14 @@
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lj-ci-aWM">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="4lw-dG-6r7"/>
-                                    <constraint firstAttribute="width" constant="375" id="Ks1-FV-XAb"/>
-                                </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem id="Ej9-Uh-0Gz">
-                                        <barButtonItem key="leftBarButtonItem" title="Share" id="UdB-SI-8rs"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Share" id="UdB-SI-8rs">
+                                            <connections>
+                                                <action selector="didTapShare" destination="BYZ-38-t0r" id="IJH-nK-o7E"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -80,7 +80,6 @@
                             <constraint firstItem="TnZ-J2-Tj4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ays-Ny-mHM"/>
                             <constraint firstItem="QMw-a0-mws" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="Btz-qk-sCZ"/>
                             <constraint firstAttribute="trailing" secondItem="TnZ-J2-Tj4" secondAttribute="trailing" id="D1g-jh-FVB"/>
-                            <constraint firstItem="QMw-a0-mws" firstAttribute="top" secondItem="1lj-ci-aWM" secondAttribute="bottom" constant="16" id="Gkk-YQ-wNk"/>
                             <constraint firstItem="TnZ-J2-Tj4" firstAttribute="top" secondItem="JP1-fH-CXi" secondAttribute="bottom" constant="30" id="Kc2-b0-lf8"/>
                             <constraint firstItem="jWC-FD-12h" firstAttribute="centerX" secondItem="QMw-a0-mws" secondAttribute="centerX" id="Lt6-EV-BQY"/>
                             <constraint firstItem="jWC-FD-12h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="R9w-l6-7RY"/>

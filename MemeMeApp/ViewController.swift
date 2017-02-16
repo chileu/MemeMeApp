@@ -22,6 +22,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var bottomToolbar: UIToolbar!
     
+    // MARK: Set pickerController
+    let pickerController = UIImagePickerController()
+    
     // MARK: Set textField attributes using NSAttributedString
     let memeTextAttributes:[String:Any] = [
         NSStrokeColorAttributeName: UIColor.black,
@@ -35,6 +38,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         topText.delegate = self
         bottomText.delegate = self
+        
+        shareButton.isEnabled = false
         
     }
     
@@ -62,14 +67,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func pickAnAlbumImage(sender: AnyObject) {
-        let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = .photoLibrary
         self.present(pickerController, animated: true, completion: nil)
     }
     
     @IBAction func pickACameraImage(sender: AnyObject) {
-        let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = .camera
         self.present(pickerController, animated: true, completion: nil)
@@ -81,6 +84,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imagePickerView.image = image
             imagePickerView.contentMode = .scaleAspectFill
         }
+        shareButton.isEnabled = true
         dismiss(animated: true, completion: nil)
     }
     
@@ -160,6 +164,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         navBar.isHidden = hide
         bottomToolbar.isHidden = hide
+    }
+    
+    @IBAction func didTapShare() {
+        let memedImage = generateMemedImage()
+        let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        activityViewController.completionWithItemsHandler = { activity, success, items, error in
+            if success {
+                self.save()
+            }
+        }
+        present(activityViewController, animated: true, completion: nil)
+        
     }
     
 }
