@@ -28,11 +28,11 @@
             </objects>
             <point key="canvasLocation" x="-2161" y="-89"/>
         </scene>
-        <!--Item-->
+        <!--Table-->
         <scene sceneID="PSv-2w-I30">
             <objects>
                 <navigationController id="msI-uf-TBR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mUJ-5M-yut"/>
+                    <tabBarItem key="tabBarItem" title="Table" id="mUJ-5M-yut"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YhK-B7-2KK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -54,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="u7G-xv-Xpf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCellSavedMemes" id="u7G-xv-Xpf">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u7G-xv-Xpf" id="hcy-Ng-KFN">
@@ -74,11 +74,11 @@
             </objects>
             <point key="canvasLocation" x="-634" y="-451"/>
         </scene>
-        <!--Item-->
+        <!--Collection-->
         <scene sceneID="EOT-oU-OK4">
             <objects>
                 <navigationController id="IxL-oE-Lag" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LT4-hE-IPC"/>
+                    <tabBarItem key="tabBarItem" title="Collection" id="LT4-hE-IPC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fm8-Ag-LSn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -106,7 +106,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lXi-iu-pGx">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCellSavedMemes" id="lXi-iu-pGx">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="-641" y="256"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
