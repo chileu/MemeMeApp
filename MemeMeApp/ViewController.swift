@@ -17,6 +17,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var albumButton: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var bottomToolbar: UIToolbar!
     
     // MARK: Set textField attributes using NSAttributedString
     let memeTextAttributes:[String:Any] = [
@@ -136,13 +140,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     // MARK: Generate a memed image that is a UIImage object
     func generateMemedImage()-> UIImage {
+        
+        hideNavItems(true)
+        
         // render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
+        hideNavItems(false)
+        
         return memedImage
+    }
+    
+    private func hideNavItems(_ hide: Bool) {
+        navigationController?.setNavigationBarHidden(hide, animated: false)
+        navigationController?.setToolbarHidden(hide, animated: false)
+        
+        navBar.isHidden = hide
+        bottomToolbar.isHidden = hide
     }
     
 }
