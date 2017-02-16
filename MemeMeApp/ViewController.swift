@@ -139,7 +139,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: Set save method that initializes a Meme object
     func save() {
-        _ = Meme(topText: topText.text, bottomText: bottomText.text, originalImage: imagePickerView.image, memedimage: generateMemedImage())
+        let meme = Meme(topText: topText.text, bottomText: bottomText.text, originalImage: imagePickerView.image, memedimage: generateMemedImage())
+
+        (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
     }
 
     // MARK: Generate a memed image that is a UIImage object
