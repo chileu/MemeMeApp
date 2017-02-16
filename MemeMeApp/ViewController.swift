@@ -128,7 +128,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
+    
+    // MARK: Set save method that initializes a Meme object
+    func save() {
+        _ = Meme(topText: topText.text, bottomText: bottomText.text, originalImage: imagePickerView.image, memedimage: generateMemedImage())
+    }
 
-
+    // MARK: Generate a memed image that is a UIImage object
+    func generateMemedImage()-> UIImage {
+        // render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return memedImage
+    }
+    
 }
 

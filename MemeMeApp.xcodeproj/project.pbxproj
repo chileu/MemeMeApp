@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921BC6561E552A4300636320 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921BC6551E552A4300636320 /* Meme.swift */; };
 		9242A6D61E54E6CB00A92F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242A6D51E54E6CB00A92F90 /* AppDelegate.swift */; };
 		9242A6D81E54E6CB00A92F90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242A6D71E54E6CB00A92F90 /* ViewController.swift */; };
 		9242A6DB1E54E6CB00A92F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9242A6D91E54E6CB00A92F90 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		921BC6551E552A4300636320 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		9242A6D21E54E6CB00A92F90 /* MemeMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9242A6D51E54E6CB00A92F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9242A6D71E54E6CB00A92F90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				9242A6D51E54E6CB00A92F90 /* AppDelegate.swift */,
 				9242A6D71E54E6CB00A92F90 /* ViewController.swift */,
+				921BC6551E552A4300636320 /* Meme.swift */,
 				9242A6D91E54E6CB00A92F90 /* Main.storyboard */,
 				9242A6DC1E54E6CB00A92F90 /* Assets.xcassets */,
 				9242A6DE1E54E6CB00A92F90 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921BC6561E552A4300636320 /* Meme.swift in Sources */,
 				9242A6D81E54E6CB00A92F90 /* ViewController.swift in Sources */,
 				9242A6D61E54E6CB00A92F90 /* AppDelegate.swift in Sources */,
 			);
@@ -301,6 +305,7 @@
 				9242A6E61E54E6CC00A92F90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
