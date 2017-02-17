@@ -206,7 +206,12 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem id="Ej9-Uh-0Gz">
-                                        <barButtonItem key="leftBarButtonItem" title="Share" id="UdB-SI-8rs">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nU0-1L-NCU">
+                                            <connections>
+                                                <action selector="didTapCancel" destination="BYZ-38-t0r" id="ulr-c7-gcG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Share" id="UdB-SI-8rs">
                                             <connections>
                                                 <action selector="didTapShare" destination="BYZ-38-t0r" id="IJH-nK-o7E"/>
                                             </connections>

@@ -33,9 +33,13 @@ class TableMemeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCellSavedMemes")!
+        print("cell for row triggered")
+        cell.imageView?.image = memes[indexPath.row].memedimage
         return cell
     }
+
+    
+   
     
 }

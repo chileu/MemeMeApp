@@ -180,5 +180,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
     }
     
+    @IBAction func didTapCancel() {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
