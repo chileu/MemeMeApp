@@ -10,8 +10,11 @@ import Foundation
 import UIKit
 
 class CollectionMemeViewController: UICollectionViewController {
-    
+
     override func viewDidLoad() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
