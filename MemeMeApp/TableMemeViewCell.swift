@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class TableMemeViewCell: UITableViewCell {
-
-    
+    @IBOutlet weak var memedImage: UIImageView!
+    @IBOutlet weak var memedTopLabel: UILabel!
+    @IBOutlet weak var memedBottomLabel: UILabel!
 }

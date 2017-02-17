@@ -21,6 +21,8 @@ class CollectionMemeViewController: UICollectionViewController {
             action: #selector(addMeme))
     }
     
+    
+    // change to IBAction? present VC is correct
     func addMeme() {
         var memeEditorVC = MemeEditorViewController()
         memeEditorVC = self.storyboard?.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController

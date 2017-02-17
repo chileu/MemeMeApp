@@ -14,14 +14,18 @@ class TableMemeViewController: UITableViewController {
     var memes = [Meme]()
 
     override func viewDidLoad() {
-        memes = appDelegate.memes
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
             action: #selector(addMeme))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        memes = appDelegate.memes
+        tableView!.reloadData()
+    }
+    
+    // change to IBAction? present VC is correct
     func addMeme() {
         var memeEditorVC = MemeEditorViewController()
         memeEditorVC = self.storyboard?.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
@@ -29,13 +33,23 @@ class TableMemeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("number of rows in section called in table view")
+        
+        print(memes)
+        print(memes.count)
+        
         return memes.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCellSavedMemes")!
-        print("cell for row triggered")
-        cell.imageView?.image = memes[indexPath.row].memedimage
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCellSavedMemes") as! TableMemeViewCell
+        
+        print("cell for row at called in table view")
+        
+        cell.memedImage.image = memes[indexPath.row].memedImage
+        cell.memedTopLabel.text = memes[indexPath.row].topText
+        cell.memedBottomLabel.text = memes[indexPath.row].bottomText
+        
         return cell
     }
 
