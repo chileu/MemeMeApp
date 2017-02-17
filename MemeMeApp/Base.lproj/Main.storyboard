@@ -45,20 +45,20 @@
             </objects>
             <point key="canvasLocation" x="-1375" y="-451"/>
         </scene>
-        <!--Table Meme View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="XKq-YR-0Pt">
             <objects>
                 <tableViewController id="wj4-pm-Zdn" customClass="TableMemeViewController" customModule="MemeMeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g6z-BH-lMr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="g6z-BH-lMr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCellSavedMemes" id="u7G-xv-Xpf" customClass="TableMemeViewCell" customModule="MemeMeApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCellSavedMemes" rowHeight="105" id="u7G-xv-Xpf" customClass="TableMemeViewCell" customModule="MemeMeApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u7G-xv-Xpf" id="hcy-Ng-KFN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -68,11 +68,11 @@
                             <outlet property="delegate" destination="wj4-pm-Zdn" id="ypg-Bd-XsG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="yoR-C6-Ebk"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="yoR-C6-Ebk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8m-cv-zf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-634" y="-451"/>
+            <point key="canvasLocation" x="-634.39999999999998" y="-451.12443778110946"/>
         </scene>
         <!--Collection-->
         <scene sceneID="EOT-oU-OK4">
@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="-1374" y="253"/>
         </scene>
-        <!--Collection Meme View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="s34-L0-ehS">
             <objects>
                 <collectionViewController id="EU5-Ci-1Oj" customClass="CollectionMemeViewController" customModule="MemeMeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,7 +129,7 @@
                             <outlet property="delegate" destination="EU5-Ci-1Oj" id="s3v-xc-vAo"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="6DV-Q2-9ch"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="6DV-Q2-9ch"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNB-hn-SWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,5 +10,6 @@ import Foundation
 import UIKit
 
 class TableMemeViewCell: UITableViewCell {
-    @IBOutlet weak var memeImageView: UIImageView!
+
+    
 }
