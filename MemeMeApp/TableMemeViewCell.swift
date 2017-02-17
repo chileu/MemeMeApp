@@ -1,5 +1,5 @@
 //
-//  TableMemeViewControllerCell.swift
+//  TableMemeViewCell.swift
 //  MemeMeApp
 //
 //  Created by Chi-Ying Leung on 2/16/17.
@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
+class TableMemeViewCell: UITableViewCell {
+    @IBOutlet weak var memeImageView: UIImageView!
+}
