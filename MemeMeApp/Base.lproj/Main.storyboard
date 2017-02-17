@@ -174,7 +174,8 @@
                                             <action selector="pickAnAlbumImageWithSender:" destination="BYZ-38-t0r" id="yWT-Bs-tpM"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Camera" id="hM3-VW-xsF">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LQh-Kk-Le8"/>
+                                    <barButtonItem systemItem="camera" id="hM3-VW-xsF">
                                         <connections>
                                             <action selector="pickACameraImageWithSender:" destination="BYZ-38-t0r" id="jtt-7K-sqn"/>
                                         </connections>
@@ -211,7 +212,7 @@
                                                 <action selector="didTapCancel" destination="BYZ-38-t0r" id="ulr-c7-gcG"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Share" id="UdB-SI-8rs">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="UdB-SI-8rs">
                                             <connections>
                                                 <action selector="didTapShare" destination="BYZ-38-t0r" id="IJH-nK-o7E"/>
                                             </connections>
