@@ -10,8 +10,12 @@ import Foundation
 import UIKit
 
 class TableMemeViewController: UITableViewController {
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var memes = [Meme]()
+
     override func viewDidLoad() {
+        memes = appDelegate.memes
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
@@ -25,7 +29,7 @@ class TableMemeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return memes.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
