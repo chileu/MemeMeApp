@@ -11,11 +11,9 @@ import UIKit
 
 class CollectionMemeViewController: UICollectionViewController {
     var memes = [Meme]()
-
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memes
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
@@ -23,7 +21,8 @@ class CollectionMemeViewController: UICollectionViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        collectionView?.reloadData()
+        memes = appDelegate.memes
+        collectionView!.reloadData()
     }
     
     // change to IBAction? present VC is correct
