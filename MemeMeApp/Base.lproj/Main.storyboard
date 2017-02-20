@@ -160,6 +160,38 @@
             </objects>
             <point key="canvasLocation" x="-642.39999999999998" y="255.92203898050977"/>
         </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="qqj-ME-o29">
+            <objects>
+                <viewController storyboardIdentifier="MemeDetailViewController" id="dVQ-gj-qpF" customClass="MemeDetailViewController" customModule="MemeMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R2h-hN-1Za"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zlj-Bb-L7A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SQr-OT-kSd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXc-A7-Rwe">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gXc-A7-Rwe" secondAttribute="trailing" id="lAi-zU-IZG"/>
+                            <constraint firstItem="gXc-A7-Rwe" firstAttribute="top" secondItem="R2h-hN-1Za" secondAttribute="bottom" id="mCF-DU-Sgg"/>
+                            <constraint firstItem="gXc-A7-Rwe" firstAttribute="leading" secondItem="SQr-OT-kSd" secondAttribute="leadingMargin" id="v8A-xI-fMv"/>
+                            <constraint firstItem="Zlj-Bb-L7A" firstAttribute="top" secondItem="gXc-A7-Rwe" secondAttribute="bottom" id="vbU-BM-4mJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="memedImageView" destination="gXc-A7-Rwe" id="fnk-TK-TCr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ls3-ne-LGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="-54"/>
+        </scene>
         <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -267,7 +299,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Grid-50" width="50" height="50"/>
-        <image name="List-50" width="50" height="50"/>
+        <image name="Grid-50" width="25" height="25"/>
+        <image name="List-50" width="25" height="25"/>
     </resources>
 </document>
