@@ -142,6 +142,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let meme = Meme(topText: topText.text, bottomText: bottomText.text, originalImage: imagePickerView.image, memedImage: generateMemedImage())
 
         (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
+        
+        dismiss(animated: true, completion: nil)
 
     }
 
