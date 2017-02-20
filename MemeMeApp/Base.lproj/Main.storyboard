@@ -28,11 +28,11 @@
             </objects>
             <point key="canvasLocation" x="-2161" y="-89"/>
         </scene>
-        <!--Table-->
+        <!--Navigation Controller-->
         <scene sceneID="PSv-2w-I30">
             <objects>
                 <navigationController id="msI-uf-TBR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" id="mUJ-5M-yut"/>
+                    <tabBarItem key="tabBarItem" title="" image="List-50" selectedImage="List-50" id="mUJ-5M-yut"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YhK-B7-2KK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -99,11 +99,11 @@
             </objects>
             <point key="canvasLocation" x="-634.39999999999998" y="-451.12443778110946"/>
         </scene>
-        <!--Collection-->
+        <!--Navigation Controller-->
         <scene sceneID="EOT-oU-OK4">
             <objects>
                 <navigationController id="IxL-oE-Lag" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="LT4-hE-IPC"/>
+                    <tabBarItem key="tabBarItem" title="" image="Grid-50" selectedImage="Grid-50" id="LT4-hE-IPC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fm8-Ag-LSn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -266,4 +266,8 @@
             <point key="canvasLocation" x="135" y="-53"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Grid-50" width="50" height="50"/>
+        <image name="List-50" width="50" height="50"/>
+    </resources>
 </document>
