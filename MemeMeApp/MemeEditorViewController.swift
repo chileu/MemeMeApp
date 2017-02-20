@@ -30,7 +30,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName: 6.0
+        NSStrokeWidthAttributeName: -3.0
     ]
     
     override func viewDidLoad() {
@@ -177,8 +177,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         activityViewController.completionWithItemsHandler = { activity, success, items, error in
             if success {
                 self.save()
-                
-                print("completion with items handler successful")
                 
             }
         }
