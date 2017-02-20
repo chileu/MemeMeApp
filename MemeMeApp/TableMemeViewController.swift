@@ -33,18 +33,11 @@ class TableMemeViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("number of rows in section called in table view")
-        
-        print(memes)
-        print(memes.count)
-        
         return memes.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCellSavedMemes") as! TableMemeViewCell
-        
-        print("cell for row at called in table view")
         
         cell.memedImage.image = memes[indexPath.row].memedImage
         cell.memedTopLabel.text = memes[indexPath.row].topText
