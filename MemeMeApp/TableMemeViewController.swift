@@ -22,14 +22,16 @@ class TableMemeViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         memes = appDelegate.memes
-        
+        tableView!.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        memes = appDelegate.memes
         if memes.count < 1 {
             var memeEditorVC = MemeEditorViewController()
             memeEditorVC = self.storyboard?.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
             present(memeEditorVC, animated: true, completion: nil)
         }
-        
-        tableView!.reloadData()
     }
     
     // change to IBAction? present VC is correct

@@ -13,15 +13,37 @@ class CollectionMemeViewController: UICollectionViewController {
     var memes = [Meme]()
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
             action: #selector(addMeme))
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         memes = appDelegate.memes
+        
+        let space: CGFloat
+        let dimension: CGFloat
+        
+        if (UIDeviceOrientationIsPortrait(UIDevice.current.orientation)) {
+            space = 3.0
+            dimension = (view.frame.size.width - (2 * space)) / 3
+            print("portrait")
+        } else {
+            space = 5.0
+            dimension = (view.frame.size.width - (4 * space)) / 5
+            print("landscape")
+        }
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        
         collectionView!.reloadData()
     }
     
